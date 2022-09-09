@@ -10,7 +10,7 @@ const Prints = () => {
     console.log(listToPrint);
   }, []);
   return (
-    <div className="hidden print:block">
+    <div className="opacity-0 print:block print:opacity-100">
       {listToPrint.map((print, index) => (
         <div key={index}>{print.element}</div>
       ))}
