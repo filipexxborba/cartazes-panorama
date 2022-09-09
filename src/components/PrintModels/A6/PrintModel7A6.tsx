@@ -11,7 +11,6 @@ const PrintModel7A6 = ({
   value,
   unidade_venda,
   ref_int,
-  validate,
   mostrar_percentual,
   mostrar_avista,
   startDate,
@@ -57,16 +56,12 @@ const PrintModel7A6 = ({
         </div>
         <div className="w-full px-20">
           <h6 className=" text-7xl font-medium w-full text-center px-40 py-5 mt-24 border-dashed border-[10px] rounded-[50px] border-black">
-            PREÇO À VISTA: R$ {value!.replaceAll(".", ",")}
+            PREÇO À VISTA: R$ {parseProductValue(value!)[0]}
+            {parseProductValue(value!)[1]}
           </h6>
         </div>
         <div className="w-full px-20 mt-20 flex items-center justify-between">
           <p className="font-bold text-3xl">Ref. Int: {ref_int}</p>
-          <p className="font-normal text-4xl">
-            Oferta válida até {new Date(validate!).toLocaleDateString()}
-          </p>
-        </div>
-        <div className="w-full flex flex-row-reverse mt-20 justify-between">
           <p className="text-[32px] mb-5 font-bold">
             Oferta válida de: {dateFormate(new Date(startDate!))} à{" "}
             {dateFormate(new Date(endDate!))}

@@ -261,6 +261,7 @@ export const PrintModelsProvider = ({ children }: IContext) => {
                     validate={
                       productInfo.posters_layouts![layoutIndex!].validate
                     }
+                    quant_parc={productInfo.posters_layouts![layoutIndex!].parc}
                     isEditing={false}
                     mostrar_avista={layoutInfo.mostrar_avista}
                     mostrar_percentual={layoutInfo.mostrar_perc}
@@ -427,6 +428,7 @@ export const PrintModelsProvider = ({ children }: IContext) => {
                     validate={
                       productInfo.posters_layouts![layoutIndex!].validate
                     }
+                    quant_parc={productInfo.posters_layouts![layoutIndex!].parc}
                     isEditing={false}
                     mostrar_avista={layoutInfo.mostrar_avista}
                     mostrar_percentual={layoutInfo.mostrar_perc}

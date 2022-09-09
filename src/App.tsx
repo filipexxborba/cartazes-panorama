@@ -47,7 +47,7 @@ function App() {
           element={<Layout6Page />}
         />
         <Route
-          path="/admin/layout/7/:title&:subtitle&:value&:ref_int&:unidade_venda&:parc&:validity&:mostrar_avista&:mostrar_percentual&:startDate&:endDate"
+          path="/admin/layout/7/:title&:subtitle&:value&:ref_int&:unidade_venda&:parc&:mostrar_avista&:mostrar_percentual&:startDate&:endDate"
           element={<Layout7Page />}
         />
         {/* Promocoes */}

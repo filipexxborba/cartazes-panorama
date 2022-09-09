@@ -1,5 +1,6 @@
 import { SyntheticEvent, useEffect, useState } from "react";
 import { IItem } from "../../@types/Item";
+import { debug } from "../../consts/debug";
 import { imagesUri } from "../../consts/images";
 import { apiUri } from "../../consts/uri";
 
@@ -12,6 +13,7 @@ const Layout7 = ({ title, subtitle, ref_int, _id, isEditing }: IItem) => {
   const handleSaveButton = async (e: SyntheticEvent) => {
     e.preventDefault();
     setIsLoadingSave(true);
+    debug && console.log(value, unidadeVenda, parc);
     fetch(`${apiUri}/products/edit/layout`, {
       headers: { "Content-type": "application/json" },
       method: "PATCH",
@@ -118,7 +120,7 @@ const Layout7 = ({ title, subtitle, ref_int, _id, isEditing }: IItem) => {
             )}
             <a
               target="_blank"
-              href={`/admin/layout/7/${title}&${subtitle}&${value}&${ref_int}&${unidadeVenda}&${parc}&${validity}&true&true&${new Date().toDateString()}&${new Date().toDateString()}`}
+              href={`/admin/layout/7/${title}&${subtitle}&${value}&${ref_int}&${unidadeVenda}&${parc}&true&true&${new Date().toDateString()}&${new Date().toDateString()}`}
               className="px-4 py-2 text-slate-500 bg-white border border-slate-500"
             >
               Visualizar
