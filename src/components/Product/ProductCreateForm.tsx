@@ -2,13 +2,6 @@ import { SyntheticEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { debug } from "../../consts/debug";
 import { apiUri } from "../../consts/uri";
-import { IProduct } from "./ProductItem";
-import Layout1 from "../LayoutForms/Layout1";
-import Layout2 from "../LayoutForms/Layout2";
-import Layout3 from "../LayoutForms/Layout3";
-import Layout4 from "../LayoutForms/Layout4";
-import Layout6 from "../LayoutForms/Layout6";
-import Layout7 from "../LayoutForms/Layout7";
 
 const ProductCreateForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -34,9 +27,10 @@ const ProductCreateForm = () => {
         posters_layouts: [],
       }),
     });
-    debug && console.log(response.status);
+    const product = await response.json();
+    debug && console.log(response.status, product);
     setIsLoadingSave(false);
-    navigate("/admin/produtos");
+    navigate(`/admin/produtos/editar/${product._id}`);
   };
 
   return (
@@ -89,130 +83,6 @@ const ProductCreateForm = () => {
             />
           </fieldset>
           <hr className="h-1 text-slate-300 w-full" />
-          <h2 className="font-medium text-lg text-slate-600">
-            Layout de impressões:
-          </h2>
-          {/* Layout 1 */}
-          <div
-            className="flex flex-row justify-between items-center w-full cursor-pointer"
-            onClick={() =>
-              document.querySelector("#layout-1")?.classList.toggle("hidden")
-            }
-          >
-            <legend className="text-lg text-slate-500">Layout 1</legend>
-            <p className="text-md text-slate-500">Esconder/Mostrar</p>
-          </div>
-          <div id="layout-1" className="hidden">
-            <Layout1
-              title={title}
-              subtitle={subTitle}
-              ref_int={parseInt(refInt)}
-              isEditing={false}
-              mostrar_avista={false}
-              mostrar_percentual={false}
-            />
-          </div>
-          {/* Layout 2 */}
-          <div
-            className="flex flex-row justify-between items-center w-full cursor-pointer"
-            onClick={() =>
-              document.querySelector("#layout-2")?.classList.toggle("hidden")
-            }
-          >
-            <legend className="text-lg text-slate-500">Layout 2</legend>
-            <p className="text-md text-slate-500">Esconder/Mostrar</p>
-          </div>
-          <div id="layout-2" className="hidden">
-            <Layout2
-              title={title}
-              subtitle={subTitle}
-              ref_int={parseInt(refInt)}
-              isEditing={false}
-              mostrar_avista={false}
-              mostrar_percentual={false}
-            />
-          </div>
-          {/* Layout 3 */}
-          <div
-            className="flex flex-row justify-between items-center w-full cursor-pointer"
-            onClick={() =>
-              document.querySelector("#layout-3")?.classList.toggle("hidden")
-            }
-          >
-            <legend className="text-lg text-slate-500">Layout 3</legend>
-            <p className="text-md text-slate-500">Esconder/Mostrar</p>
-          </div>
-          <div id="layout-3" className="hidden">
-            <Layout3
-              title={title}
-              subtitle={subTitle}
-              ref_int={parseInt(refInt)}
-              isEditing={false}
-              mostrar_avista={false}
-              mostrar_percentual={false}
-            />
-          </div>
-          {/* Layout 4 */}
-          <div
-            className="flex flex-row justify-between items-center w-full cursor-pointer"
-            onClick={() =>
-              document.querySelector("#layout-4")?.classList.toggle("hidden")
-            }
-          >
-            <legend className="text-lg text-slate-500">Layout 4</legend>
-            <p className="text-md text-slate-500">Esconder/Mostrar</p>
-          </div>
-          <div id="layout-4" className="hidden">
-            <Layout4
-              title={title}
-              subtitle={subTitle}
-              ref_int={parseInt(refInt)}
-              isEditing={false}
-              mostrar_avista={false}
-              mostrar_percentual={false}
-            />
-          </div>
-          {/* Layout 6 */}
-          <div
-            className="flex flex-row justify-between items-center w-full cursor-pointer"
-            onClick={() =>
-              document.querySelector("#layout-6")?.classList.toggle("hidden")
-            }
-          >
-            <legend className="text-lg text-slate-500">Layout 6</legend>
-            <p className="text-md text-slate-500">Esconder/Mostrar</p>
-          </div>
-          <div id="layout-6" className="hidden">
-            <Layout6
-              title={title}
-              subtitle={subTitle}
-              ref_int={parseInt(refInt)}
-              isEditing={false}
-              mostrar_avista={false}
-              mostrar_percentual={false}
-            />
-          </div>
-          {/* Layout 7 */}
-          <div
-            className="flex flex-row justify-between items-center w-full cursor-pointer"
-            onClick={() =>
-              document.querySelector("#layout-7")?.classList.toggle("hidden")
-            }
-          >
-            <legend className="text-lg text-slate-500">Layout 7</legend>
-            <p className="text-md text-slate-500">Esconder/Mostrar</p>
-          </div>
-          <div id="layout-7" className="hidden">
-            <Layout7
-              title={title}
-              subtitle={subTitle}
-              ref_int={parseInt(refInt)}
-              isEditing={false}
-              mostrar_avista={false}
-              mostrar_percentual={false}
-            />
-          </div>
-          <hr className="h-1 text-slate-300 w-full mt-1" />
           <div className="flex flex-row-reverse gap-2">
             <button
               onClick={(e: SyntheticEvent) => handleSaveButton(e)}
