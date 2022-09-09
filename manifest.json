@@ -1,0 +1,15 @@
+{
+  "name": "Cartazes PHC",
+  "short_name": "Cartazes PHC",
+  "lang": "pt-BR",
+  "background_color": "#f8fafc",
+  "theme_color": "#047857",
+  "display": "standalone",
+  "description": "Cadastro de campanhas e produtos para cartazes.",
+  "icons": [
+    {
+      "src": "./src/assets/logo-operacoes-192x192.png",
+      "sizes": "192x192"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Creighton;
+  font-weight: 300;
+  src: url(./fonts/CreightonReg.otf);
+}
+
+@font-face {
+  font-family: Creighton;
+  font-weight: 300;
+  font-style: italic;
+  src: url(./fonts/CreightonItalic.otf);
+}
+
+@font-face {
+  font-family: Creighton;
+  font-weight: 600;
+  src: url(./fonts/CreightonBold.otf);
+}
+
+@font-face {
+  font-family: Creighton;
+  font-weight: 600;
+  font-style: italic;
+  src: url(./fonts/CreightonBoldItalic.otf);
+}
+
+#model-bg {
+  @apply w-[1656px];
+  background: url("./assets/model.webp") no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @apply bg-slate-50;
+}
+
+#h {
+  position: relative;
+}
+
+.previously {
+  width: 8px;
+  height: 299px;
+  position: absolute;
+  background: black;
+  bottom: -109px;
+  left: 269px;
+  transform: rotate(78deg);
+  @apply print:bg-black;
+  -webkit-print-color-adjust: exact;
+}
+
+.previously3 {
+  width: 8px;
+  height: 457px;
+  position: absolute;
+  background: black;
+  bottom: -129px;
+  left: 383px;
+  transform: rotate(78deg);
+  @apply print:bg-black;
+  -webkit-print-color-adjust: exact;
+}
+
+.previously4 {
+  width: 14px;
+  height: 600px;
+  position: absolute;
+  background: black;
+  bottom: -250px;
+  left: 260px;
+  transform: rotate(78deg);
+  @apply print:bg-black;
+  -webkit-print-color-adjust: exact;
+}
+
+.horizontalStroke {
+  padding-left: 8px;
+}
+
+.horizontalStroke span {
+  width: 10px;
+  height: 220px;
+  background: black;
+  display: block;
+  @apply print:bg-black;
+  -webkit-print-color-adjust: exact;
+}
+
+.arrow-up::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(6 95 70);
+  z-index: 999;
+}
