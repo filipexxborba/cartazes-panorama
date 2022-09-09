@@ -107,3 +107,9 @@ body {
   border-bottom: 10px solid rgb(6 95 70);
   z-index: 999;
 }
+
+@media print {
+  body {
+    @apply font-['Creighton'];
+  }
+}
