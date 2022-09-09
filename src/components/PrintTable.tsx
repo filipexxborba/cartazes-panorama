@@ -105,7 +105,7 @@ const PrintTable = () => {
           <div className="table  w-full bg-gray-100 rounded-xl border border-slate-200">
             <div className="table table-auto w-full">
               <div className="table-header-group">
-                <div className="table-row">
+                <div className="table-row shadow-md">
                   <div className="table-cell text-center pt-5 px-4 pb-2 text-slate-500 font-medium text-sm">
                     Imprimir
                   </div>

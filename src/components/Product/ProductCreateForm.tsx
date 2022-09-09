@@ -21,7 +21,7 @@ const ProductCreateForm = () => {
   const handleSaveButton = async (e: SyntheticEvent) => {
     e.preventDefault();
     setIsLoadingSave(true);
-
+    debug && console.log(title, subTitle, refInt);
     const response = await fetch(`${apiUri}/products/create`, {
       method: "POST",
       headers: {
