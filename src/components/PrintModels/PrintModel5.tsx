@@ -6,7 +6,7 @@ const PrintModel5 = ({ title, value }: IItem) => {
     <div id="model-bg" className="relative">
       <img src={model} className="print:opacity-0 print:invisible" />
       <div className="absolute top-[600px] max-w-[1656px]">
-        <h1 className=" text-[150px] font-bold w-full text-center px-20 font-['Creighton'] leading-[200px]">
+        <h1 className=" text-[150px] font-bold w-full text-center px-14 font-['Creighton'] leading-[250px]">
           {title}
         </h1>
         <div className="w-full px-20 mt-[60px] flex items-start justify-evenly">

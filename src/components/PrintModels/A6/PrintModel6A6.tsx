@@ -23,7 +23,7 @@ const PrintModel6A6 = ({
     <div id="model-bg" className="relative">
       <img src={model} className="print:opacity-0 print:invisible" />
       <div className="absolute top-[350px] max-w-[1656px]">
-        <h1 className=" text-[200px] font-bold w-full text-center px-20 font-['Creighton'] leading-[200px]">
+        <h1 className=" text-[200px] font-bold w-full text-center px-14 font-['Creighton'] leading-[200px]">
           {title!.toUpperCase()}
         </h1>
         <h2 className=" text-6xl font-medium w-full text-center px-20 mt-20 font-['Creighton']">

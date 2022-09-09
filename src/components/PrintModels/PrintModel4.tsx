@@ -39,8 +39,8 @@ const PrintModel4 = ({
   return (
     <div id="model-bg" className="relative">
       <img src={model} className="print:opacity-0 print:invisible" />
-      <div className="absolute top-[600px] w-[1656px] px-20">
-        <h1 className="text-[200px] font-bold w-full text-center font-['Creighton'] leading-[200px]">
+      <div className="absolute top-[600px] w-[1656px] px-14">
+        <h1 className="text-[200px] font-bold w-full text-center font-['Creighton'] leading-[250px]">
           {title!.toUpperCase()}
         </h1>
         <h2 className=" text-[64px] font-medium text-center mt-2 font-['Creighton']">
