@@ -28,8 +28,8 @@ const ProductCreateForm = () => {
         "Content-type": "application/json",
       },
       body: JSON.stringify({
-        product_title: title,
-        product_subtitle: subTitle,
+        product_title: title.replaceAll("/", "-"),
+        product_subtitle: subTitle.replaceAll("/", "-"),
         ref_int: refInt,
         posters_layouts: [],
       }),

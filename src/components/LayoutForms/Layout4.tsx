@@ -117,7 +117,7 @@ const Layout4 = ({ title, subtitle, ref_int, _id, isEditing }: IItem) => {
             )}
             <a
               target="_blank"
-              href={`/admin/layout/4/${title}&${subtitle}&${valuePreviously}&${value}&${ref_int}&${unidadeVenda}&${parc}&true&true`}
+              href={`/admin/layout/4/${title}&${subtitle}&${valuePreviously}&${value}&${ref_int}&${unidadeVenda}&${parc}&true&true&${new Date().toDateString()}&${new Date().toDateString()}`}
               className="px-4 py-2 text-slate-500 bg-white border border-slate-500"
             >
               Visualizar

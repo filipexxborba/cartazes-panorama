@@ -1,7 +1,5 @@
 import { SyntheticEvent, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { IItem } from "../../@types/Item";
-import { debug } from "../../consts/debug";
 import { imagesUri } from "../../consts/images";
 import { apiUri } from "../../consts/uri";
 
@@ -16,6 +14,8 @@ const Layout1 = ({
   const [value, setValue] = useState("");
   const [unidadeVenda, setUnidadeVenda] = useState("");
   const [isLoadingSave, setIsLoadingSave] = useState<boolean>(false);
+
+  const date = "2022-09-30T00:00:00.000Z";
 
   // const navigate = useNavigate();
   const handleSaveButton = async (e: SyntheticEvent) => {
@@ -113,7 +113,7 @@ const Layout1 = ({
             )}
             <a
               target="_blank"
-              href={`/admin/layout/1/${title}&${subtitle}&${valuePreviously}&${value}&${ref_int}&${unidadeVenda}&true&true`}
+              href={`/admin/layout/1/${title}&${subtitle}&${valuePreviously}&${value}&${ref_int}&${unidadeVenda}&true&true&${new Date().toDateString()}&${new Date().toDateString()}`}
               className="px-4 py-2 text-slate-500 bg-white border border-slate-500"
             >
               Visualizar
