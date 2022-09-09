@@ -44,7 +44,7 @@ const PrintModel3A6 = ({
         <h1 className="text-[200px] font-bold w-full text-center font-['Creighton'] leading-[200px]">
           {title.toUpperCase()}
         </h1>
-        <h2 className=" text-[80px] font-medium text-center mt-2 font-['Creighton']">
+        <h2 className=" text-[80px] font-medium text-center mt-2 font-['Creighton'] ">
           {subtitle!.toUpperCase()}
         </h2>
         <div className="flex gap-8 items-center w-[1656px] mt-60 px-16">

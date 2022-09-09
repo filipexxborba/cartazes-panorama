@@ -38,10 +38,10 @@ const PrintModel1A6 = ({
         className="print:opacity-0 print:invisible"
       />
       <div className="absolute top-[300px] w-[1656px] px-20">
-        <h1 className="text-[200px] font-bold w-full text-center font-['Creighton']">
+        <h1 className="text-[200px] font-bold w-full text-center font-['Creighton'] leading-[200px]">
           {title.toUpperCase()}
         </h1>
-        <h2 className=" text-[65px] font-medium text-center mt-2 font-['Creighton']">
+        <h2 className=" text-[65px] font-medium text-center mt-2 font-['Creighton'] leading-[200px]">
           {subtitle!.toUpperCase()}
         </h2>
         <div className="flex items-start mt-80">

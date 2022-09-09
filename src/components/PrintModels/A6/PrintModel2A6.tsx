@@ -37,7 +37,7 @@ const PrintModel2A6 = ({
     <div id="model-bg" className="relative">
       <img src={model} className="print:opacity-0 print:invisible" />
       <div className="absolute top-[300px] w-[1656px] px-20">
-        <h1 className="text-[140px] font-bold w-full text-center">
+        <h1 className="text-[140px] font-bold w-full text-center  leading-[1]">
           {title.toUpperCase()}
         </h1>
         <h2 className=" text-[60px] font-medium text-center">
